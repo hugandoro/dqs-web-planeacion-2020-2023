@@ -168,7 +168,18 @@
 
       <div class="col-md-4 mb-5">
         <br><br>
-        <center><a href="https://www.dosquebradas.gov.co/web/index.php/home/secretarias-y-dependencias/planeacion/SISBEN"><img src="img/logo_sisben.jpg" alt="" class = "img-responsive" width="100%"></a></center>
+
+        <center><a href="https://www.dosquebradas.gov.co/web/index.php/home/secretarias-y-dependencias/planeacion/SISBEN"><img src="img/logo_sisben.jpg" alt="" class = "img-responsive" width="100%"></a></center><hr>
+
+        <form action="validador_en_campo.php" method="POST">
+          <div class="form-group">
+            <label for="identificacion">N° de identificacion</label>
+            <input type="number" class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion del visitador">
+            <small id="ayudaIdentificacion" class="form-text text-muted">Consutar si el visitador es un funcionaro autorizado por la Secretaria de Planeacion</small>
+          </div>
+          <button type="submit" class="btn btn-warning">Consultar...</button>
+        </form>
+                
         <hr>
         <img src="img/banner1.jpg" alt="" class = "img-responsive" width="100%">
         <hr>
