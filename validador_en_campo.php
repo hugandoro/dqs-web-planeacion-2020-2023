@@ -1,3 +1,4 @@
+<?php require_once('bd/sle.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,7 +40,7 @@
     <?php $identificacion = $_POST['identificacion']; ?>
 
     <?php
-      $mysqli = new mysqli("localhost", "root", "", "genus_asistente_pqr");
+      $mysqli = new mysqli($hostname_sle, $username_sle, $password_sle, $database_sle);
 
       if (mysqli_connect_errno()) {
           printf("Falló la conexión: %s\n", mysqli_connect_error());
