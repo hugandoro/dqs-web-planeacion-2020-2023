@@ -19,7 +19,7 @@
 </head>
 
 <body>
-  <img src="img/nota1.png" class="stick1"/>
+  <!-- <img src="img/nota1.png" class="stick1"/> -->
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -34,16 +34,19 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html"><b>Secretaria de Planeación</b> </a>
+            <a class="nav-link" href="#direcciones_operativas">.:: Direcciones operativas </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">.:: Asuntos Socioeconómicos </a>
+            <a class="nav-link" href="#validacion_funcionarios">.:: Validacion funcionarios</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">.:: Ordenamiento Territorial </a>
+            <a class="nav-link" href="https://pot.dosquebradas.gov.co">.:: POT </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">.:: Sistemas de Gestión</a>
+            <a class="nav-link" href="https://plandesarrollo.dosquebradas.gov.co">.:: Plan de desarrollo </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="bancoproyectos.html">.:: Banco de proyectos </a>
           </li>
         </ul>
       </div>
@@ -71,6 +74,12 @@
   <div class="container">
 
     <div class="row">
+      <div class="col-lg-12 col-md-12 col-xs-12" align="center">
+        <div><a href="https://plandesarrollo.dosquebradas.gov.co"><img src="img/banner_22102020.jpg" width="100%"></a></div><br>
+      </div>
+    </div>
+
+    <div class="row" id="direcciones_operativas">
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <img class="card-img-top" src="img/uno.jpg" alt="" width="40">
@@ -166,21 +175,23 @@
 
       </div>
 
-      <div class="col-md-4 mb-5">
-        <br><br>
-
+      <div class="col-md-4 mb-5" id="validacion_funcionarios">
+        
         <center><a href="https://www.dosquebradas.gov.co/web/index.php/home/secretarias-y-dependencias/planeacion/SISBEN"><img src="img/logo_sisben.jpg" alt="" class = "img-responsive" width="100%"></a></center><hr>
+        <br>
 
         <form action="validador_en_campo.php" method="POST">
           <div class="form-group">
-            <label for="identificacion">N° de identificacion</label>
+            <h3><span class="label label-default">Validacion de visitadores</span></h3>
             <input type="number" class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion del visitador">
             <small id="ayudaIdentificacion" class="form-text text-muted">Consutar si el visitador es un funcionaro autorizado por la Secretaria de Planeacion</small>
           </div>
           <button type="submit" class="btn btn-warning">Consultar...</button>
         </form>
-                
+            
+        <br>
         <hr>
+
         <img src="img/banner1.jpg" alt="" class = "img-responsive" width="100%">
         <hr>
         <center><a href="https://plandesarrollo.dosquebradas.gov.co/f2-aprobacion.php"><img src="img/caratula_plan.jpeg" alt="" class = "img-responsive" width="100%"></a></center>
