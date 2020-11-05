@@ -21,40 +21,36 @@
 
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    
-    <div class="container">
-      <a class="navbar-brand" href="index.html">
-        <img src="img/escudo.png" alt="" width="50px">
-        Alcaldia de Dosquebradas
-      </a>
-    </div>
-
-  </nav>
-
   <!-- Page Content -->
   <div class="container">
-    <br><br>
+    <div class="row">
+      <div class="col-md-12 mb-12">
+        <center>
+          <H5>Alcaldia Municipio de Dosquebradas</H5>
+          <img src="img/escudo.png" alt="" width="50px">
+          <img src="img/logotipo_pie.png" alt="" width="80px">
+        </center>
+      </div>
+    </div>
 
     <?php $identificacion = $_POST['identificacion']; ?>
 
     <?php
-      $mysqli = new mysqli($hostname_sle, $username_sle, $password_sle, $database_sle);
+    $mysqli = new mysqli($hostname_sle, $username_sle, $password_sle, $database_sle);
 
-      if (mysqli_connect_errno()) {
-          printf("Falló la conexión: %s\n", mysqli_connect_error());
-          exit();
-      }
+    if (mysqli_connect_errno()) {
+      printf("Falló la conexión: %s\n", mysqli_connect_error());
+      exit();
+    }
 
-      $consulta = "SELECT * FROM validador_en_campo WHERE identificacion = $identificacion LIMIT 1";
+    $consulta = "SELECT * FROM validador_en_campo WHERE identificacion = $identificacion LIMIT 1";
 
-      if ($resultado = $mysqli->query($consulta)) {
-          $fila = $resultado->fetch_row();
-          $resultado->close();
-      }
+    if ($resultado = $mysqli->query($consulta)) {
+      $fila = $resultado->fetch_row();
+      $resultado->close();
+    }
 
-      $mysqli->close();
+    $mysqli->close();
     ?>
 
     <?php if (isset($fila)) { ?>
@@ -62,8 +58,8 @@
 
         <div class="col-md-12 mb-12">
           <center>
-          <img src=<?php echo "fotos/" . $fila[10] . ".jpg" ?> style="border-radius: 35px 35px 35px 35px;" alt="" width="150px"><br>
-          <hr>
+            <img src=<?php echo "fotos/" . $fila[10] . ".jpg" ?> style="border-radius: 15px 15px 15px 15px;" alt="" width="120px"><br>
+            <hr>
           </center>
         </div>
 
@@ -101,7 +97,7 @@
         <?php if ($fila[9] == "AUTORIZADO") { ?>
           <div class="col-md-12 mb-12 alert alert-success">
             <center>
-                <h4><strong>Funcionario AUTORIZADO</strong></h4>
+              <h4><strong>Funcionario AUTORIZADO</strong></h4>
             </center>
           </div>
         <?php } ?>
@@ -109,20 +105,20 @@
         <?php if ($fila[9] == "NO AUTORIZADO") { ?>
           <div class="col-md-12 mb-12 alert alert-danger">
             <center>
-                <h4><strong>Funcionario NO AUTORIZADO</strong></h4>
+              <h4><strong>Funcionario NO AUTORIZADO</strong></h4>
             </center>
           </div>
         <?php } ?>
-                  
+
       </div>
       <!-- /.row -->
     <?php } else { ?>
 
       <div class="row">
         <div class="col-md-12 mb-12 alert alert-danger">
-            <center>
-                <h4><strong>Funcionario NO ENCONTRADO</strong></h4>
-            </center>
+          <center>
+            <h4><strong>Funcionario NO ENCONTRADO</strong></h4>
+          </center>
         </div>
       </div>
 
