@@ -96,13 +96,7 @@
       exit();
     }
 
-    $consulta = "SELECT * FROM validador_en_campo WHERE identificacion = $identificacion LIMIT 1";
-    echo $identificacion;
-    echo "<br>";
-    echo $consulta;
-    $resultado = $mysqli->query($consulta);
-    $fila = $resultado->fetch_row();
-    echo $fila[3];
+    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil = $identificacion LIMIT 1";
 
     if ($resultado = $mysqli->query($consulta)) {
       $fila = $resultado->fetch_row();
