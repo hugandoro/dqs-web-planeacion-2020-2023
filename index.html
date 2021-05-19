@@ -210,10 +210,22 @@
         <form action="validador_en_campo.php" method="POST">
           <div class="form-group">
             <h3><span class="label label-default">Validación de visitadores</span></h3>
-            <input type="number" class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion del visitador">
+            <input type="number" required class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion del visitador">
             <small id="ayudaIdentificacion" class="form-text text-muted">Consutar si el visitador es un funcionaro autorizado por la Secretaría de Planeación</small>
           </div>
-          <button type="submit" class="btn btn-warning">Consultar...</button>
+          <button type="submit" class="btn btn-warning btn-block">Realizar verificación</button>
+        </form>
+            
+        <br>
+        <hr>
+
+        <form action="validador_encuesta_nueva.php" method="POST">
+          <div class="form-group">
+            <h3><span class="label label-default">Requiero encuesta nueva ?</span></h3>
+            <input type="number" required class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion">
+            <small id="ayudaIdentificacion" class="form-text text-muted">Digite su numero de identificación para verificar si se encuentra en el listado de personas que requieren solicitar una encuesta nueva por cambio de domicilio</small>
+          </div>
+          <button type="submit" class="btn btn-warning btn-block">Realizar consultar</button>
         </form>
             
         <br>
