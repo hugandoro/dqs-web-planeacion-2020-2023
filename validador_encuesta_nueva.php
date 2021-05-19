@@ -97,6 +97,9 @@
     }
 
     $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil = $identificacion LIMIT 1";
+    echo $identificacion;
+    echo "<br>";
+    echo $consulta;
 
     if ($resultado = $mysqli->query($consulta)) {
       $fila = $resultado->fetch_row();
