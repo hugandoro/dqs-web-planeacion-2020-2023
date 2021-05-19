@@ -96,7 +96,7 @@
       exit();
     }
 
-    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil = $identificacion LIMIT 1";
+    $consulta = "SELECT * FROM validador_en_campo WHERE identificacion = $identificacion LIMIT 1";
     echo $identificacion;
     echo "<br>";
     echo $consulta;
