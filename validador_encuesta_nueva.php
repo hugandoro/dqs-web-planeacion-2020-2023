@@ -100,6 +100,9 @@
     echo $identificacion;
     echo "<br>";
     echo $consulta;
+    $resultado = $mysqli->query($consulta);
+    $fila = $resultado->fetch_row();
+    echo $fila[3];
 
     if ($resultado = $mysqli->query($consulta)) {
       $fila = $resultado->fetch_row();
