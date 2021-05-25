@@ -117,15 +117,16 @@
 
         <div class="col-md-12 mb-12">
           <center>
-            <label for="identificacion"><?php echo $fila[1]; ?> - <?php echo $fila[2]; ?></label>
+            <label for="identificacion">El documento <?php echo $fila[1]; ?> - <?php echo $fila[2]; ?> se encuentra en el listado para ser actualizado en la base de datos del Sisbén en el Municipio de Dosquebradas.</label>
           </center>
         </div>
 
         <div class="col-md-12 mb-12"><br></div>
 
-        <div class="col-md-12 mb-12 alert alert-danger">
+        <div class="col-md-12 mb-12 alert alert-info">
           <center>
-            <h4><strong>Este usuario debe solicitar encuesta nueva por cambio domicilio</strong></h4>
+            <h4>Le invitamos a solicitar virtualmente su turno para atención <a href="https://forms.gle/c92AnBTVQLcQh7me6"><b>ingresando a este vinculo</b></a></h4>
+            <h5>Si dispone de todos los documentos de su núcleo familiar debidamente escaneados en PDF, por favor envíelos al correo sisben@dosquebradas.gov.co, indicando nombre completo del jefe del hogar, celular, correo electrónico y dirección del lugar de residencia.</h5>
           </center>
         </div>
 
@@ -139,7 +140,7 @@
       <div class="row">
         <div class="col-md-12 mb-12 alert alert-info">
           <center>
-            <h4><strong>Usuario NO encontrado</strong></h4>
+            <h4><strong>El N° de identificacón no se encuentra en la base de datos para verificación</strong></h4>
           </center>
         </div>
       </div>
