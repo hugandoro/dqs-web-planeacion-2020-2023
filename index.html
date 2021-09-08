@@ -76,23 +76,27 @@
   <!-- Page Content -->
   <div class="container">
 
-    <!-- 
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <div><a href="https://forms.gle/68NC23JbsJ4QhJiRA"><img src="img/banner_rendicion_cuentas_25032021.jpg" width="100%"></a></div><br>
+    <div class="row" id="direcciones_operativas">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <a href="https://plandesarrollo.dosquebradas.gov.co/"><img class="card-img-top" src="img/plan_desarrollo.png" alt=""></a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <a href="https://politicaspublicas.dosquebradas.gov.co/"><img class="card-img-top" src="img/politicas_publicas.png" alt=""></a>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100">
+          <br>
+          <a href="https://presupuestoparticipativo.dosquebradas.gov.co/"><img class="card-img-top" src="img/boton_presupuesto.png" alt=""></a>
+        </div>
       </div>
     </div>
+    <!-- /.row -->
 
-    <hr><br>
-    -->
 
-    <!-- 
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <div><a href="https://presupuestoparticipativo.dosquebradas.gov.co/app_votacion_2021/?c=Preinscripcion&a=Index&token="><img src="img/banner_pre.jpg" width="100%"></a></div><br>
-      </div>
-    </div>
-  -->
 
     <div class="row" id="direcciones_operativas">
       <div class="col-md-4 mb-5">
@@ -228,7 +232,7 @@
         <form action="validador_encuesta_nueva.php" method="POST">
           <div class="form-group">
             <h3><span class="label label-default">Requiero encuesta nueva ?</span></h3>
-            <input type="number" required class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion">
+            <input type="text" required class="form-control" id="identificacion" name="identificacion" aria-describedby="emailHelp" placeholder="N° de indentificacion">
             <small id="ayudaIdentificacion" class="form-text text-muted">Digite su numero de identificación para verificar si se encuentra en el listado de personas que requieren solicitar una encuesta nueva por cambio de domicilio</small>
           </div>
           <button type="submit" class="btn btn-warning btn-block">Realizar consultar</button>

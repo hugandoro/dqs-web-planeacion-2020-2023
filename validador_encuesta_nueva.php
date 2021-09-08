@@ -96,7 +96,7 @@
       exit();
     }
 
-    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil = $identificacion LIMIT 1";
+    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil LIKE $identificacion LIMIT 1";
 
     if ($resultado = $mysqli->query($consulta)) {
       $fila = $resultado->fetch_row();
@@ -150,10 +150,23 @@
   </div>
   <!-- /.container -->
 
+  <!-- Leemos el contador de visitas -->
+  <?php
+  $archivo = "contador.txt"; //el archivo que contiene en numero
+  $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
+  if ($f) {
+    $contador = fread($f, filesize($archivo)); //leemos el archivo
+    fclose($f);
+  }
+  ?>
+  <!-- Fin lectura contador visitas-->
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
       <p class="m-0 text-center text-white">Copyright &copy; Alcaldia Municipio de Dosquebradas 2020 - 2023</p>
+      <p class="m-0 text-center text-white">Consultas realizadas a la fecha | <b><?php echo $contador; ?></b></p>
+
       <p class="m-0 text-center text-white"><a href='https://www.freepik.es'>Creditos imagenes - www.freepik.es</a></p>
     </div>
     <!-- /.container -->
