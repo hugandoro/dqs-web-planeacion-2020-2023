@@ -96,7 +96,7 @@
       exit();
     }
 
-    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil LIKE $identificacion LIMIT 1";
+    $consulta = "SELECT * FROM sisben_otro_municipio WHERE num_afil LIKE '$identificacion' LIMIT 1";
 
     if ($resultado = $mysqli->query($consulta)) {
       $fila = $resultado->fetch_row();
@@ -156,6 +156,12 @@
   $f = fopen($archivo, "r"); //abrimos el archivo en modo de lectura
   if ($f) {
     $contador = fread($f, filesize($archivo)); //leemos el archivo
+    $contador = $contador + 1; //sumamos +1 al contador
+    fclose($f);
+  }
+  $f = fopen($archivo, "w+");
+  if ($f) {
+    fwrite($f, $contador);
     fclose($f);
   }
   ?>
