@@ -24,8 +24,11 @@ if (isset($_POST['numeroMeta'])){
     $proyecto = $result->proyecto_nombre;
     $meta = $result->actividad_nombre;
     $numero_meta = $result->actividad_numeral;
-    $porcentaje_realizado = round($result->porcentaje_realizado,3);
+    $porcentaje_realizado = round($result->porcentaje_realizado,3) . " %";
     $dependencia_responsable = $result->dependencia_responsable;
+
+    // Excepcion de informacion para las metas de SERVICIUDAD que no se miden por la plataforma EstrateGov
+    if ($dependencia_responsable == 'Serviciudad') $porcentaje_realizado = "NA";
 
     echo "
     <div class='row'>
@@ -48,7 +51,7 @@ if (isset($_POST['numeroMeta'])){
           <td style='font-size:11px'>$proyecto</td>
           <td style='font-size:11px'>$meta</td>
           <td style='font-size:11px'>$dependencia_responsable</td>
-          <td style='font-size:28px'>$porcentaje_realizado %</td>
+          <td style='font-size:28px'>$porcentaje_realizado</td>
         </tr>
       </table>
     </div>

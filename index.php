@@ -88,7 +88,7 @@
 
         <form action="index.php" method="POST">
           <div class="form-group">
-            <h3><span class="label label-default">Conoce como van nuestras metas del plan</span></h3>
+            <h3><span class="label label-default">Conoce como van las metas del plan de desarrollo</span></h3>
             <input type="number" min="1" max="448" required class="form-control" id="numeroMeta" name="numeroMeta" aria-describedby="emailHelp" placeholder="N° de actividad / meta a consultar...">
             <small id="ayudaIdentificacion" class="form-text text-muted">Digita el numero de la meta a consultar, de la actividad N° 1 al 448</small>
           </div>
