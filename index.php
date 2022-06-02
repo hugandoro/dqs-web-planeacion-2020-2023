@@ -24,7 +24,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand" href="index.php">
         <img src="img/escudo.png" alt="" width="50px">
         Alcaldia de Dosquebradas
       </a>
@@ -79,37 +79,30 @@
   <!-- Page Content -->
   <div class="container">
 
-    <!--
     <div class="row">
       <div class="col-lg-4 col-md-4 col-xs-4" align="center">
-        <div><a href="https://forms.gle/d7ipHHzcmTy2uDBY6" target="_blank"><button type="submit" class="btn btn-warning btn-block"><h4>Indícanos tu tema de interés</h4></button></div>
+        <a href="https://plandesarrollo.dosquebradas.gov.co/"><img class="card-img" src="img/plan_desarrollo.png" alt=""></a>
       </div>
 
-      <div class="col-lg-4 col-md-4 col-xs-4" align="center">
-        <div><a href="https://forms.gle/5kJZKrLBTYESagVj8" target="_blank"><button type="submit" class="btn btn-warning btn-block"><h4>Pregúntale al alcalde</h4></button></div>
-      </div>
+      <div class="col-lg-8 col-md-8 col-xs-8">
 
-      <div class="col-lg-4 col-md-4 col-xs-4" align="center">
-        <div><a href="/repositorio/rendicion2021/INFORME DE GESTION ALCALDE 2021.pdf" target="_blank"><button type="submit" class="btn btn-warning btn-block"><h4>Informe de gestión</h4></button></div>
-      </div>
+        <form action="index.php" method="POST">
+          <div class="form-group">
+            <h3><span class="label label-default">Conoce como van nuestras metas del plan</span></h3>
+            <input type="number" min="1" max="448" required class="form-control" id="numeroMeta" name="numeroMeta" aria-describedby="emailHelp" placeholder="N° de actividad / meta a consultar...">
+            <small id="ayudaIdentificacion" class="form-text text-muted">Digita el numero de la meta a consultar, de la actividad N° 1 al 448</small>
+          </div>
+          <button type="submit" class="btn btn-warning btn-block">Consultar</button>
+        </form>
 
-      <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <div><a href="#"><img src="img/rc2021/rendicion_cuentas_marzo_2022.jpeg" width="100%"></a><hr></div>
       </div>
     </div>
-    -->
+
+    <br><?php require_once 'consumeServiceMedicionIndicador.php'; ?>
 
     <div class="row">
       <div class="col-lg-12 col-md-12 col-xs-12" align="center">
         <div><a href="https://www.funcionpublica.gov.co/documents/35000242/38598841/Resultados_pnga_2021.pdf/42709c0f-ee16-b018-d02c-b2ade919010e?t=1635550747007"><img src="img/banner_alta_gerencia_2021.jpg" width="100%"></a><hr></div>
-      </div>
-    </div>
-
-    <br>
-
-    <div class="row">
-      <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <div><a href="https://mivacuna.sispro.gov.co/MiVacuna/Account/Login"><img src="img/Banner_MiVacuna.png" width="100%"></a></div><br>
       </div>
     </div>
 
